@@ -30,13 +30,13 @@ class AuthActivity : AppCompatActivity() {
 
         //Kode ini harus selalu dipanggil saat butuh akses "user_pref"
         val sharedPref = getSharedPreferences("session_user", MODE_PRIVATE)
-
-        //Kondisi jika isLogin bernilai true
-        val isLogin = sharedPref.getBoolean("isLogin", false)
-        if (isLogin) {
-            val intent =  Intent (this, MainActivity::class.java)
-            startActivity(intent)
-        }
+//
+//        //Kondisi jika isLogin bernilai true
+//        val isLogin = sharedPref.getBoolean("isLogin", false)
+//        if (isLogin) {
+//            val intent =  Intent (this, MainActivity::class.java)
+//            startActivity(intent)
+//        }
 
         binding.btnLogin.setOnClickListener {
 

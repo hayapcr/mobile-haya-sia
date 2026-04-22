@@ -14,14 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HayaApps">
         <activity
-            android:name=".MainActivity"
+            android:name=".AuthActivity"
             android:exported="false" />
-        <!-- WebView Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" /> <!-- WebView Activity -->
         <activity
             android:name=".pertemuan_5.WebViewActivity"
             android:exported="false" /> <!-- FIFTH ACTIVITY JADI LAUNCHER -->
         <activity
-            android:name=".AuthActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
