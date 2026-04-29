@@ -3,15 +3,13 @@ package com.example.hayaapps
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.hayaapps.databinding.ActivityAuthBinding
 import com.example.hayaapps.databinding.ActivityMainBinding
 import com.example.hayaapps.pertemuan_4.FourthActivity
+import com.example.hayaapps.pertemuan_7.SeventhActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +26,22 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        binding.btnToSecond.setOnClickListener {
+            //Mengambil value dari inputNama dan menampilkan di Logcat
+
+            val intent = Intent(this, FourthActivity::class.java)
+
+            startActivity(intent)
+        }
+
+        binding.btnToThird.setOnClickListener {
+            //Mengambil value dari inputNama dan menampilkan di Logcat
+
+            val intent = Intent(this, FourthActivity::class.java)
+
+            startActivity(intent)
+        }
+
         //Kode ini harus selalu dipanggil saat butuh akses "user_pref"
         val sharedPref = getSharedPreferences("session_user", MODE_PRIVATE)
 
@@ -39,6 +53,22 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("name", "Politeknik Caltex Riau")
             intent.putExtra("from", "Rumbai")
             intent.putExtra("age", 25)
+
+            startActivity(intent)
+        }
+
+        binding.btnToFifth.setOnClickListener {
+            //Mengambil value dari inputNama dan menampilkan di Logcat
+
+            val intent = Intent(this, FourthActivity::class.java)
+
+            startActivity(intent)
+        }
+
+        binding.btnToSeven.setOnClickListener {
+            //Mengambil value dari inputNama dan menampilkan di Logcat
+
+            val intent = Intent(this, SeventhActivity::class.java)
 
             startActivity(intent)
         }
