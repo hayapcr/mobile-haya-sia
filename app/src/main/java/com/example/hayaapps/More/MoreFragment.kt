@@ -1,4 +1,4 @@
-package com.example.hayaapps.pertemuan_7
+package com.example.hayaapps.More
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,14 +8,14 @@ import android.view.ViewGroup
 import com.example.hayaapps.R
 
 
-class SatuFragment : Fragment() {
+class MoreFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_satu, container, false)
+        return inflater.inflate(R.layout.fragment_more, container, false)
     }
 
 }

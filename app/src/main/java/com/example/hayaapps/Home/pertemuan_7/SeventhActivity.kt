@@ -1,8 +1,9 @@
-package com.example.hayaapps.pertemuan_7
+package com.example.hayaapps.Home.pertemuan_7
 
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -26,7 +27,7 @@ class SeventhActivity : AppCompatActivity() {
 
         replaceFragment(SatuFragment())
 
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         setSupportActionBar(binding.toolbar)

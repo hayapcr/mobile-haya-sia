@@ -1,4 +1,4 @@
-package com.example.hayaapps.pertemuan_5
+package com.example.hayaapps.Home.pertemuan_5
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,8 +8,10 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.NestedScrollView
 import com.example.hayaapps.R
 import java.util.Calendar
 class FifthActivity : AppCompatActivity() {
@@ -18,7 +20,7 @@ class FifthActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_fifth)
 
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
         supportActionBar?.apply {
@@ -51,7 +53,7 @@ class FifthActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val scrollView = findViewById<androidx.core.widget.NestedScrollView>(R.id.nestedScrollView)
+        val scrollView = findViewById<NestedScrollView>(R.id.nestedScrollView)
 
         scrollView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->
 
