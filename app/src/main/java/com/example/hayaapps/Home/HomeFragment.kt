@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import com.example.hayaapps.AuthActivity
 import com.example.hayaapps.Home.pertemuan_4.FourthActivity
 import com.example.hayaapps.Home.pertemuan_7.SeventhActivity
+import com.example.hayaapps.Home.pertemuan_9.NinthActivity
 import com.example.hayaapps.R
 import com.example.hayaapps.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -76,6 +77,14 @@ class HomeFragment : Fragment() {
             //Mengambil value dari inputNama dan menampilkan di Logcat
 
             val intent = Intent(requireContext(), SeventhActivity::class.java)
+
+            startActivity(intent)
+        }
+
+        binding.btnToNinth.setOnClickListener {
+            //Mengambil value dari inputNama dan menampilkan di Logcat
+
+            val intent = Intent(requireContext(), NinthActivity::class.java)
 
             startActivity(intent)
         }

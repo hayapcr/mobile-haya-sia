@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Home.HomeFragment">
+
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/bg_header_setengahlingkaran"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="90dp"
         android:text="Learning Dashboard"
         android:textColor="@color/black"
         android:textSize="26sp"
@@ -21,6 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pilih materi untuk memulai"
@@ -29,94 +39,96 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnToSecond"
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:text="Pertemuan 2"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        app:backgroundTint="#6200EE"
-        app:cornerRadius="16dp"
-        app:elevation="8dp"
-        app:icon="@android:drawable/ic_menu_today"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:columnCount="1"
+        app:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintBottom_toTopOf="@id/btnLogout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnToThird"
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:text="Pertemuan 3"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        app:backgroundTint="#3700B3"
-        app:cornerRadius="16dp"
-        app:elevation="8dp"
-        app:icon="@android:drawable/ic_menu_today"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToSecond"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:text="Pertemuan 2"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="#6200EE"
+            app:cornerRadius="16dp"
+            app:elevation="8dp"
+            app:icon="@android:drawable/ic_menu_today" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnToFourth"
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:text="Pertemuan 4"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        app:backgroundTint="#03DAC5"
-        android:textColor="#000000"
-        app:iconTint="#000000"
-        app:cornerRadius="16dp"
-        app:elevation="8dp"
-        app:icon="@android:drawable/ic_menu_today"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToThird"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:text="Pertemuan 3"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="#3700B3"
+            app:cornerRadius="16dp"
+            app:elevation="8dp"
+            app:icon="@android:drawable/ic_menu_today" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnToFifth"
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:text="Pertemuan 5"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        app:backgroundTint="#018786"
-        app:cornerRadius="16dp"
-        app:elevation="8dp"
-        app:icon="@android:drawable/ic_menu_today"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToFourth"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:text="Pertemuan 4"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:backgroundTint="#03DAC5"
+            app:cornerRadius="16dp"
+            app:elevation="8dp"
+            app:icon="@android:drawable/ic_menu_today"
+            app:iconTint="#000000" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnToSeven"
-        android:layout_width="280dp"
-        android:layout_height="60dp"
-        android:text="Pertemuan 7"
-        android:textAllCaps="false"
-        android:textSize="16sp"
-        app:backgroundTint="#BB86FC"
-        android:textColor="#000000"
-        app:iconTint="#000000"
-        app:cornerRadius="16dp"
-        app:elevation="8dp"
-        app:icon="@android:drawable/ic_menu_today"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.69" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToFifth"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:text="Pertemuan 5"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="#018786"
+            app:cornerRadius="16dp"
+            app:elevation="8dp"
+            app:icon="@android:drawable/ic_menu_today" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToSeven"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:text="Pertemuan 7"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:backgroundTint="#BB86FC"
+            app:cornerRadius="16dp"
+            app:elevation="8dp"
+            app:icon="@android:drawable/ic_menu_today"
+            app:iconTint="#000000" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToNinth"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:text="Pertemuan 9"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:backgroundTint="#EDE28C"
+            app:cornerRadius="16dp"
+            app:elevation="8dp"
+            app:icon="@android:drawable/ic_menu_today"
+            app:iconTint="#000000" />
+
+    </androidx.gridlayout.widget.GridLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogout"
@@ -126,9 +138,10 @@
         android:layout_marginBottom="40dp"
         android:text="Logout"
         android:textColor="#CF6679"
-        app:strokeColor="#CF6679"
         app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#CF6679" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
