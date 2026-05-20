@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.hayaapps.AuthActivity
+import com.example.hayaapps.Home.pertemuan_10.TenthActivity
 import com.example.hayaapps.Home.pertemuan_4.FourthActivity
 import com.example.hayaapps.Home.pertemuan_7.SeventhActivity
 import com.example.hayaapps.Home.pertemuan_9.NinthActivity
@@ -85,6 +86,14 @@ class HomeFragment : Fragment() {
             //Mengambil value dari inputNama dan menampilkan di Logcat
 
             val intent = Intent(requireContext(), NinthActivity::class.java)
+
+            startActivity(intent)
+        }
+
+        binding.btnToTenth.setOnClickListener {
+            //Mengambil value dari inputNama dan menampilkan di Logcat
+
+            val intent = Intent(requireContext(), TenthActivity::class.java)
 
             startActivity(intent)
         }
