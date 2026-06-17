@@ -20,6 +20,7 @@ import com.example.hayaapps.Home.pertemuan_9.NinthActivity
 import com.example.hayaapps.Home.photo.PhotoAdapter
 import com.example.hayaapps.R
 import com.example.hayaapps.databinding.FragmentHomeBinding
+import com.example.hayaapps.pertemuan_13.ThirteenthActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
 
@@ -99,6 +100,14 @@ class HomeFragment : Fragment() {
             //Mengambil value dari inputNama dan menampilkan di Logcat
 
             val intent = Intent(requireContext(), TenthActivity::class.java)
+
+            startActivity(intent)
+        }
+
+        binding.btnToThirteenth.setOnClickListener {
+            //Mengambil value dari inputNama dan menampilkan di Logcat
+
+            val intent = Intent(requireContext(), ThirteenthActivity::class.java)
 
             startActivity(intent)
         }

@@ -160,6 +160,21 @@
                     app:elevation="4dp"
                     app:cornerRadius="12dp" />
 
+                <Button
+                    android:id="@+id/btnToThirteenth"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    app:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:backgroundTint="#37474F"
+                    android:text="Pertemuan 13"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    app:elevation="4dp"
+                    app:cornerRadius="12dp" />
+
             </androidx.gridlayout.widget.GridLayout>
 
             <androidx.recyclerview.widget.RecyclerView
