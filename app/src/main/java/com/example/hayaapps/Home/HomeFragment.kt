@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hayaapps.AuthActivity
 import com.example.hayaapps.Data.api.PhotoApiClient
 import com.example.hayaapps.Home.pertemuan_10.TenthActivity
+import com.example.hayaapps.Home.pertemuan_3.ThirdActivity
 import com.example.hayaapps.Home.pertemuan_4.FourthActivity
 import com.example.hayaapps.Home.pertemuan_7.SeventhActivity
 import com.example.hayaapps.Home.pertemuan_9.NinthActivity
@@ -52,7 +53,7 @@ class HomeFragment : Fragment() {
         binding.btnToThird.setOnClickListener {
             //Mengambil value dari inputNama dan menampilkan di Logcat
 
-            val intent = Intent(requireContext(), FourthActivity::class.java)
+            val intent = Intent(requireContext(), ThirdActivity::class.java)
 
             startActivity(intent)
         }
